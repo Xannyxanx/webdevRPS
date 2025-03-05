@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}   
+
+.container{
+    border-radius: 14px;
+    padding: 2rem 4rem;
+    background: antiquewhite;
+    box-shadow: 0 5px 10px black
+}
+
+
+.result_images img{
+    width:100px;
+}
+
+.result_images{
+    display:flex;
+    column-gap: 7rem;
+}
+
+.user{
+    transform:  rotate(90deg);
+}
+
+.computer{
+    transform: rotate(-90deg)  rotateY(180deg);
+}
+
+.result{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.choices img{
+    width: 70px;
+}
+
+.choices img{
+    width: 70px;
+    pointer-events: none;
+}
+
+.choices_images p{
+    margin-left: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.choices{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    margin-top: 2rem;
+    
+}
+
+.choices_images{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: 0.3 ease;
+    cursor: pointer;
+}
+
+.choices_images:hover{
+    opacity: 1;
+}
+
+.choices_images.selected{
+    opacity: 1;
+}
+
+.container.Start .user{
+    animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50%{
+        transform: rotate(5deg);
+    }
+}
+
+.container.Start .computer{
+    animation: computerShake 0.7s ease infinite;
+}
+
+@keyframes computerShake {
+    50%{
+        transform: rotate(-5deg)  rotateY(180deg);
+    }
+}
+
+.container.Start .choices_images{
+    pointer-events: none;
+}
